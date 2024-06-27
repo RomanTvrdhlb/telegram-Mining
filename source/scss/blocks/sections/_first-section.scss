@@ -2,7 +2,7 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
-  padding: 71px 0 164px;
+  padding: 96px 0 164px;
   height: 100vh;
 
   &::before, &::after{
@@ -58,7 +58,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    grid-gap: 50px;
     z-index: 3;
+
+    .mining{
+      align-items: flex-start;
+
+      @include for-mobile{
+        margin-top: -10vh;
+      }
+
+      @include mobile{
+        margin-top: -15vh;
+      }
+    }
+
+    .title{
+      z-index: 5;
+      text-align: start;
+    }
   }
+
 }
+

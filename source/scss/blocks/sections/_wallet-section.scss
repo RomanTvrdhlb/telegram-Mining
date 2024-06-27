@@ -1,10 +1,16 @@
 .wallet-section{
-    padding-top: 14px;
+    padding: 14px 0 91px;
+    min-height: 100dvh;
+  
+    .container{
+        min-height: 100%;
+    }
 
     &__box{
         display: flex;
         flex-direction: column;
-        
+        min-height: calc(100dvh - 105px);
+
         @include for-mobile{
             grid-gap: clamp(20px, 2.9297vw, 30px);
         }

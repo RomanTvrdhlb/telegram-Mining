@@ -3,17 +3,23 @@
     overflow: hidden;
     padding: 14px 0 91px;
     min-height: 100dvh;
+
+    .container{
+        min-height: 100%;
+    }
+
     &__box{
         display: flex;
         flex-direction: column;
         grid-gap: 13px;
-       
+        min-height: calc(100dvh - 105px);
     }
 
     &__inner{
         display: flex;
         flex-direction: column;
         grid-gap: 5px;
+        flex-grow: 1;
     }
 }
 
@@ -22,6 +28,7 @@
     justify-content: center;
     width: 100%;
     height: auto;
+    flex-grow: 1;
   
     img,video{
         width: 100%;

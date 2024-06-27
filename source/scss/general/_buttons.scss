@@ -1,12 +1,10 @@
 .main-btn {
   border-radius: 9999px;
   width: 108px;
-  height: 42px;
   box-shadow: 0 5px 0 0 #1c5eaf;
   background: rgba(var(--bg-g),1.0);
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 14px;
   line-height: 150%;
   letter-spacing: -0.02em;
   text-align: center;
@@ -15,6 +13,30 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+
+  @include for-mobile{
+    height: clamp(42px, 4.6875vw, 48px);
+    font-size: clamp(14px, 1.5625vw, 16px);
+  }
+
+  @include mobile{
+    height: 42px;
+    font-size: 14px;
+  }
+
+  &__icon{
+    @include for-mobile{
+      width: clamp(31px, 3.418vw, 35px);
+      height: clamp(31px, 3.418vw, 35px);
+      margin-right: calc(clamp(31px, 3.418vw, 35px) * -1);
+    }
+
+    @include mobile{
+      width: 31px;
+      height: 31px;
+      margin-right: -31px;
+    }
+  }
 
   &:hover{
     opacity: 0.9;

@@ -55,12 +55,12 @@
     padding: 10px 18px;
 
     &--mode {
-      padding: 10px 18px 10px 46px;
+      padding: 12px 18px 8px 46px;
 
       .main-form__input {
         font-weight: 700;
         line-height: 131%;
-  
+      
         @include for-mobile {
           font-size: clamp(16px, 1.7578vw, 18px);
         }
@@ -72,7 +72,7 @@
         &::placeholder {
           font-weight: 700;
           line-height: 131%;
-    
+          
           @include for-mobile {
             font-size: clamp(16px, 1.7578vw, 18px);
           }

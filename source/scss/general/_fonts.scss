@@ -10,21 +10,14 @@
   }
 }
 
-@include font-face("AllianceNo.2",  "AllianceNo.2-Regular", 400, normal);
-@include font-face("AllianceNo.2",  "AllianceNo.2-Medium", 500, normal);
-@include font-face("AllianceNo.2",  "AllianceNo.2-SemiBold", 600, normal);
-@include font-face("AllianceNo.2",  "AllianceNo.2-ExtraBold", 800, normal);
+@include font-face("sf-pro-display",  "sf-pro-display-regular", 400, normal);
+@include font-face("sf-pro-display",  "sf-pro-display-medium", 500, normal);
+@include font-face("sf-pro-display",  "sf-pro-display-semibold", 600, normal);
+@include font-face("sf-pro-display",  "sf-pro-display-bold", 700, normal);
 
-@include font-face("Nexa",  "NexaLight", 300, normal);
-@include font-face("Nexa",  "Nexa-book", 400, normal);
-@include font-face("Nexa",  "Nexa-XBold", 800, normal);
-
-@include font-face("Nexa-Bold",  "Nexa-Bold-Regular", 400, normal);
-@include font-face("Nexa-Bold",  "Nexa-Bold", 700, normal);
-
-@include font-face("Inter",  "Inter-Medium", 400, normal);
-
-@include font-face("Nexa-Regular",  "Nexa-Regular-Regular", 400, normal);
+@include font-face("gilroy",  "gilroy-regular", 400, normal);
+@include font-face("gilroy",  "gilroy-semi-bold", 600, normal);
+@include font-face("gilroy",  "gilroy-bold", 700, normal);
 
 
 // 100 – Thin || Hairline
