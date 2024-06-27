@@ -1,0 +1,29 @@
+.wallet-section{
+    padding-top: 14px;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        
+        @include for-mobile{
+            grid-gap: clamp(20px, 2.9297vw, 30px);
+        }
+
+        @include mobile{
+            grid-gap: 20px;
+        }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        
+        @include for-mobile{
+            grid-gap: clamp(7px, 1.3672vw, 14px);
+        }
+
+        @include mobile{
+            grid-gap: 7px;
+        }
+    }
+}

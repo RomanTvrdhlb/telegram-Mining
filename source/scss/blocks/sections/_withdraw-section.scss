@@ -1,0 +1,28 @@
+.withdraw-section{
+    overflow: hidden;
+    padding: 37px 0 10px;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 24px;
+    }
+
+    &__top{
+        grid-gap: 8px;
+        display: flex;
+        flex-direction: column;
+
+        p{
+            color: rgba(var(--cl-a),1.0);
+            line-height: 150%;
+            letter-spacing: -0.02em;
+
+            @include mobile{
+                font-size: 14px;
+            }
+        }
+    }
+ 
+
+}

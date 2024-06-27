@@ -1,0 +1,30 @@
+.mining-section{
+    padding-top: 14px;
+    overflow: hidden;
+    padding: 14px 0 91px;
+    min-height: 100dvh;
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 13px;
+       
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+    }
+}
+
+.mining{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  
+    img,video{
+        width: 100%;
+        height: auto;
+    }
+}

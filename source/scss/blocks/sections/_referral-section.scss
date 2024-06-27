@@ -1,0 +1,58 @@
+.referral-section{
+  padding-top: 21px;
+
+  &__box{
+      display: flex;
+      flex-direction: column;
+      
+      @include for-mobile{
+          grid-gap: clamp(20px, 2.9297vw, 30px);
+      }
+
+      @include mobile{
+          grid-gap: 20px;
+      }
+
+      .invite{
+        margin-top: -1px;
+      }
+  }
+
+  &__inner{
+      display: flex;
+      flex-direction: column;
+      
+      @include for-mobile{
+          grid-gap: clamp(7px, 1.3672vw, 14px);
+      }
+
+      @include mobile{
+          grid-gap: 7px;
+      }
+  }
+
+  &__wrapper{
+        padding-top: 11px;
+        display: flex;
+        flex-direction: column;
+        
+        @include for-mobile{
+            grid-gap: clamp(20px, 2.7344vw, 28px);
+        }
+  
+        @include mobile{
+            grid-gap: 20px;
+        }
+
+        &--mode{
+            @include for-mobile{
+                grid-gap: clamp(33px, 3.7109vw, 38px);
+            }
+      
+            @include mobile{
+                grid-gap: 33px;
+            }
+        }
+
+  }
+}

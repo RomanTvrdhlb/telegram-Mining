@@ -1,0 +1,136 @@
+.invite {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px 10px;
+  padding: 21px 23px 34px;
+  border-radius: 21px;
+  background: var(--gr-b);
+  border: 1px solid var(--br-b);
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    grid-column: 1/-1;
+
+    @include for-mobile {
+      font-size: clamp(21px, 2.7344vw, 28px);
+    }
+
+    @include mobile {
+      font-size: 21px;
+    }
+  }
+
+  &__box {
+    background: var(--gr-b);
+    border: 1px solid var(--br-b);
+    border-radius: 21px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    grid-gap: 13px;
+    padding: 14px 14px 12px 10px;
+
+    @include for-mobile{
+        min-height: clamp(60px, 6.8359vw, 70px);
+    }
+
+    @include mobile{
+        min-height: 60px;
+    }
+  }
+
+  &__label{
+    grid-column: 1/-1;
+    background: rgba(var(--bg-c),1.0);
+    border-radius: 9999px;
+    height: 42px;
+    padding: 10px 21px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include for-mobile{
+        height: clamp(42px, 4.4922vw, 46px);
+    }
+
+    @include mobile{
+        height: 42px;
+    }
+  }
+
+  &__input{
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(var(--cl-a),1.0);
+    padding: 0;
+    text-align: start;
+
+    @include for-mobile{
+        font-size: clamp(14px, 1.5625vw, 16px);
+    }
+
+    @include mobile{
+        font-size: 14px;
+    }
+
+    &::placeholder{
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: rgba(var(--cl-a),1.0);
+    
+        @include for-mobile{
+            font-size: clamp(14px, 1.5625vw, 16px);
+        }
+    
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+  }
+
+  &__value {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: rgba(var(--cl-e),1.0);
+   
+    @include for-mobile{
+        font-size: clamp(40px, 4.6875vw, 48px);
+    }
+
+    @include mobile{
+        max-width: 51px;
+        font-size: 40px;
+    }
+  }
+
+  &__text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 142%;
+    letter-spacing: -0.03em;
+    
+    @include for-mobile{
+        font-size: clamp(12px, 1.3672vw, 14px);
+    }
+
+    @include mobile{
+        font-size: 12px;
+    }
+  }
+}

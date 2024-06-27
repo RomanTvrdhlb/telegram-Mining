@@ -1,0 +1,39 @@
+.main-btn {
+  border-radius: 9999px;
+  width: 108px;
+  height: 42px;
+  box-shadow: 0 5px 0 0 #1c5eaf;
+  background: rgba(var(--bg-g),1.0);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(var(--cl-a),1.0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover{
+    opacity: 0.9;
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 0 #1c5eaf; 
+  }
+
+  &--red{
+    box-shadow: 0 5px 0 0 #a00f2d;
+    background: rgba(var(--bg-h),1.0);
+
+    &:hover{
+      box-shadow: 0 3px 0 0 #a00f2d;
+    }
+  }
+}
+
+
+
+
+
+

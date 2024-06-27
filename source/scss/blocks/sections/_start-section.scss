@@ -1,0 +1,17 @@
+.start-section{
+    padding-top: 32px;
+    overflow: hidden;
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+
+        @include for-mobile{
+            grid-gap: clamp(18px, 2.5391vw, 26px);
+        }
+
+        @include mobile{
+            grid-gap: 18px;
+        }
+    }
+}

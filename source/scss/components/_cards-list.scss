@@ -1,0 +1,12 @@
+.cards-list{
+    display: flex;
+    flex-direction: column;
+    
+    @include for-mobile{
+        grid-gap: clamp(15px, 2.4414vw, 25px);
+    }
+
+    @include mobile{
+        grid-gap: 15px;
+    }
+}

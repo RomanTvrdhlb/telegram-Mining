@@ -1,0 +1,64 @@
+.first-section {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding: 71px 0 164px;
+  height: 100vh;
+
+  &::before, &::after{
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 8%;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    filter: blur(15px);
+    top: 50%;
+    transform: translateY(-58%);
+  }
+
+  &::before{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='225' height='645' fill='none'%3E%3Cg filter='url(%23filter0_f_51_263)'%3E%3Ccircle cx='-97.5' cy='322.5' r='127.5' fill='%23E41020'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_51_263' width='645' height='645' x='-420' y='0' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_51_263' stdDeviation='97.5'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+    background-position: left center;
+    width: 225px;
+    height: 600px;
+
+    @include for-mobile{
+      left: -3%;
+    }
+
+    @include mobile{
+      left: -5%;
+    }
+  }
+
+  &::after{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='249' height='645' fill='none'%3E%3Cg filter='url(%23filter0_f_51_262)'%3E%3Ccircle cx='322.5' cy='322.5' r='127.5' fill='%231362F1'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_51_262' width='645' height='645' x='0' y='0' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_51_262' stdDeviation='97.5'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E"); right: -10%;
+    background-position: right center;
+    width: 225px;
+    height: 600px;
+
+    @include for-mobile{
+      right: -4%;
+    }
+
+    @include mobile{
+      right: -11%;
+    }
+  }
+
+  .container{
+    height: 100%;
+  }
+
+  &__box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 50px;
+    z-index: 3;
+  }
+}

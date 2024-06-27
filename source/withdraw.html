@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="withdraw-section">
+      <div class="container">
+        <div class="withdraw-section__box">
+          <div class="withdraw-section__top">
+            <h1 class="title">Withdraw</h1>
+            <p>This amount will be sent to the TRC-20 compatible
+              wallet adress</p>
+          </div>
+
+              <form class="main-form">
+                <label for="coin" class="main-form__label main-form__label--mode">
+                  <span class="main-form__icon">
+                    <img width="24" height="24" src="./img/index/coin4.png" alt="icon">
+                  </span>
+                  <input type="text" name="coin" id="coin" class="main-form__input" placeholder="100">
+                  <span class="main-form__name">TRX</span>
+                </label>
+                <label for="adress" class="main-form__label">
+                  <span class="main-form__icon"></span>
+                  <input type="text" name="adress" id="adress" class="main-form__input" placeholder="Your TRX (TRC20) Adress">
+                </label>
+                <button class="main-btn">Wifthdraw</button>
+              </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>
