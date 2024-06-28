@@ -60,17 +60,6 @@
     justify-content: space-between;
     z-index: 3;
 
-    .mining{
-      align-items: flex-start;
-
-      @include for-mobile{
-        margin-top: -10vh;
-      }
-
-      @include mobile{
-        margin-top: -12vh;
-      }
-    }
 
     .title{
       z-index: 5;
