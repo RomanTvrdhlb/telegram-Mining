@@ -12,7 +12,7 @@
     top: 8%;
     pointer-events: none;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     filter: blur(15px);
     top: 50%;
     transform: translateY(-58%);
@@ -61,11 +61,21 @@
     z-index: 3;
 
 
+
+    .mining{
+      position: relative;
+      z-index: 1;
+      flex-grow: initial;
+      height: 390px;
+      margin-bottom: 10px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
     .title{
       z-index: 5;
       text-align: start;
     }
   }
-
 }
-

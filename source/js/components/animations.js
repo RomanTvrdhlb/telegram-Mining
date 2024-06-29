@@ -1,73 +1,45 @@
-import lottie from 'lottie-web';
+const images = [
+  "./img/mining/0020.png", "./img/mining/0021.png", "./img/mining/0022.png", 
+  "./img/mining/0023.png", "./img/mining/0024.png", "./img/mining/0025.png",
+  "./img/mining/0026.png", "./img/mining/0027.png", "./img/mining/0028.png",
+  "./img/mining/0029.png", "./img/mining/0030.png", "./img/mining/0031.png",
+  "./img/mining/0032.png", "./img/mining/0033.png", "./img/mining/0034.png",
+  "./img/mining/0035.png", "./img/mining/0036.png", "./img/mining/0037.png",
+  "./img/mining/0038.png", "./img/mining/0039.png", "./img/mining/0040.png",
+  "./img/mining/0041.png", "./img/mining/0042.png", "./img/mining/0043.png",
+  "./img/mining/0044.png", "./img/mining/0045.png", "./img/mining/0046.png",
+  "./img/mining/0047.png", "./img/mining/0048.png", "./img/mining/0049.png",
+  "./img/mining/0050.png"
+];
 
-const platformData = require('./../platfrom.json');
-const moreData = require('./../more.json');
-const securityData = require('./../security.json');
-const aprData = require('./../apr.json');
-const supportData = require('./../support.json');
-const riskData = require('./../risk.json');
+let currentIndex = 0;
+const animationDiv = document.getElementById('animation');
 
+if (animationDiv) {
+  const preloadedImages = [];
 
-const platformEl = document.getElementById('platform');
-const moreEl = document.getElementById('more');
-const securityEl = document.getElementById('security');
-const aprEl = document.getElementById('apr');
-const supportEl = document.getElementById('support');
-const riskEl = document.getElementById('risk');
+  images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      preloadedImages.push(img);
+  });
 
-const platformOptions = {
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  animationData: platformData,
-};
-
-const moreOptions = {
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  animationData: moreData,
-};
-
-const securityOptions = {
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  animationData: securityData,
-};
-
-const aprOptions = {
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  animationData: aprData,
-};
-
-const supportOptions = {
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  animationData: supportData,
-};
-
-const riskOptions = {
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  animationData: riskData,
-};
-
-
-function initAnimation(options, container) {
-  if (options && container) {
-    options.container = container;
-    lottie.loadAnimation(options);
+  function changeImage() {
+      if (animationDiv) {
+          animationDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+          currentIndex = (currentIndex + 1) % images.length;
+      }
   }
-}
 
-initAnimation(platformOptions, platformEl);
-initAnimation(moreOptions, moreEl);
-initAnimation(securityOptions, securityEl);
-initAnimation(aprOptions, aprEl);
-initAnimation(supportOptions, supportEl);
-initAnimation(riskOptions, riskEl);
+  Promise.all(preloadedImages.map(img => new Promise(resolve => {
+      img.onload = resolve;
+      img.onerror = () => {
+          console.error(`Failed to load image: ${img.src}`);
+          resolve();
+      };
+  }))).then(() => setInterval(changeImage, 50));
+
+  window.onload = changeImage;
+} else {
+  console.error('Animation div not found');
+}

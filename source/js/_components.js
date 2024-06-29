@@ -3,7 +3,7 @@
 // import './components/tabs';
 // import './components/modals';
 // import './components/card';
-// import './components/showPass';
+import './components/animations';
 
 
 
