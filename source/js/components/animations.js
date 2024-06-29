@@ -14,32 +14,55 @@ const images = [
 
 let currentIndex = 0;
 const animationDiv = document.getElementById('animation');
+let isAnimating = false;
 
 if (animationDiv) {
   const preloadedImages = [];
 
   images.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-      preloadedImages.push(img);
+    const img = new Image();
+    img.src = src;
+    preloadedImages.push(img);
   });
 
   function changeImage() {
-      if (animationDiv) {
-          animationDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
-          currentIndex = (currentIndex + 1) % images.length;
+    if (animationDiv) {
+      animationDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+      currentIndex++;
+    }
+  }
+
+  function startAnimation() {
+    if (!isAnimating) {
+      isAnimating = true;
+      currentIndex = 0;
+      function animate() {
+        if (currentIndex < images.length) {
+          changeImage();
+          setTimeout(animate, 25);
+        } else {
+          isAnimating = false;
+        }
       }
+      animate();
+    }
   }
 
   Promise.all(preloadedImages.map(img => new Promise(resolve => {
-      img.onload = resolve;
-      img.onerror = () => {
-          console.error(`Failed to load image: ${img.src}`);
-          resolve();
-      };
-  }))).then(() => setInterval(changeImage, 50));
+    img.onload = resolve;
+    img.onerror = () => {
+      console.error(`Failed to load image: ${img.src}`);
+      resolve();
+    };
+  }))).then(() => {
+    animationDiv.addEventListener('click', startAnimation);
+  });
 
-  window.onload = changeImage;
+  window.onload = () => {
+    if (animationDiv) {
+      animationDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+    }
+  };
 } else {
   console.error('Animation div not found');
 }
