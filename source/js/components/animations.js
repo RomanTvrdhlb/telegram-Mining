@@ -11,58 +11,51 @@ const images = [
   "./img/mining/0047.png", "./img/mining/0048.png", "./img/mining/0049.png",
   "./img/mining/0050.png"
 ];
-
 let currentIndex = 0;
-const animationDiv = document.getElementById('animation');
-let isAnimating = false;
+const animationImage = document.getElementById('animationImage');
+const backgroundDiv = document.querySelector('#animation .mining__bg');
 
-if (animationDiv) {
-  const preloadedImages = [];
+if (animationImage && backgroundDiv) {
+    const preloadedImages = [];
 
-  images.forEach((src) => {
-    const img = new Image();
-    img.src = src;
-    preloadedImages.push(img);
-  });
-
-  function changeImage() {
-    if (animationDiv) {
-      animationDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
-      currentIndex++;
+    function preloadImage(src) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => resolve(src);
+            img.onerror = () => reject(`Failed to load image: ${src}`);
+        });
     }
-  }
 
-  function startAnimation() {
-    if (!isAnimating) {
-      isAnimating = true;
-      currentIndex = 0;
-      function animate() {
-        if (currentIndex < images.length) {
-          changeImage();
-          setTimeout(animate, 25);
-        } else {
-          isAnimating = false;
+    async function preloadImages() {
+        for (let i = 0; i < images.length; i++) {
+            try {
+                const imgSrc = await preloadImage(images[i]);
+                preloadedImages.push(imgSrc);
+            } catch (error) {
+                console.error(error);
+            }
         }
-      }
-      animate();
+        startAnimation();
     }
-  }
 
-  Promise.all(preloadedImages.map(img => new Promise(resolve => {
-    img.onload = resolve;
-    img.onerror = () => {
-      console.error(`Failed to load image: ${img.src}`);
-      resolve();
-    };
-  }))).then(() => {
-    animationDiv.addEventListener('click', startAnimation);
-  });
-
-  window.onload = () => {
-    if (animationDiv) {
-      animationDiv.style.backgroundImage = `url('${images[currentIndex]}')`;
+    function startAnimation() {
+        setTimeout(() => {
+            backgroundDiv.style.opacity = '0';
+            backgroundDiv.style.display = 'none';
+            animationImage.style.visibility = 'visible';
+            setInterval(changeImage, 35);
+        }, 500); 
     }
-  };
+
+    function changeImage() {
+        animationImage.src = preloadedImages[currentIndex];
+        currentIndex = (currentIndex + 1) % preloadedImages.length;
+    }
+
+    animationImage.src = images[0];
+
+    preloadImages();
 } else {
-  console.error('Animation div not found');
+    console.error('Animation image or container not found');
 }
