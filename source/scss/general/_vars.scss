@@ -30,27 +30,12 @@
   --second-family: "gilroy", sans-serif; // var(--second-family);
 
 
-
   // --------------- default text color variables ---------------
   --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
   --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
   --cl-c: #{HexToRGB(#9F99BB)}; // rgba(var(--cl-c),1.0);
   --cl-d: #{HexToRGB(#01021e)}; // rgba(var(--cl-d),1.0);
   --cl-e: #{HexToRGB(#1362f1)}; // rgba(var(--cl-e),1.0);
-
-
-  --cl-f: #{HexToRGB(#0b0a17)}; // rgba(var(--cl-f),1.0);
-  --cl-g: #{HexToRGB(#f0f3f7)}; // rgba(var(--cl-g),1.0);
-  --cl-h: #{HexToRGB(#898fb2)}; // rgba(var(--cl-h),1.0);
-  --cl-i: #{HexToRGB(#5d5d75)}; // rgba(var(--cl-i),1.0);
-  --cl-j: #{HexToRGB(#53FFEC)}; // rgba(var(--cl-j),1.0);
-  --cl-k: #{HexToRGB(#c0c0ff)}; // rgba(var(--cl-k),1.0);
-  --cl-l: #{HexToRGB(#434CFF)}; // rgba(var(--cl-l),1.0);
-  --cl-m: #{HexToRGB(#F62C2C)}; // rgba(var(--cl-m),1.0);
-  --cl-n: #{HexToRGB(#e7e6f9)}; // rgba(var(--cl-n),1.0);
-  --cl-o: #{HexToRGB(#2D366C)}; // rgba(var(--cl-o),1.0);
-  --cl-p: #{HexToRGB(#344051)}; // rgba(var(--cl-p),1.0);
-  --cl-q: #{HexToRGB(#ECFDF5)}; // rgba(var(--cl-q),1.0);
 
   // --------------- default background color variables ---------------
   --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
@@ -63,85 +48,16 @@
   --bg-h: #{HexToRGB(#ed1d49)}; // rgba(var(--bg-h),1.0);
   --bg-i: #{HexToRGB(#030221)}; // rgba(var(--bg-i),1.0);
 
-
-  --bg-j: #{HexToRGB(#05051e)}; // rgba(var(--bg-j),1.0);
-  --bg-k: #{HexToRGB(#1d1b3c)}; // rgba(var(--bg-k),1.0);
-  --bg-l: #{HexToRGB(#353dd8)}; // rgba(var(--bg-l),1.0);
-  --bg-m: #{HexToRGB(#2D366C)}; // rgba(var(--bg-m),1.0);
-  --bg-n: #{HexToRGB(#26225d)}; // rgba(var(--bg-n),1.0);
-  --bg-o: #{HexToRGB(#0f0f18)}; // rgba(var(--bg-o),1.0);
-  --bg-p: #{HexToRGB(#0e0d25)}; // rgba(var(--bg-p),1.0);
-  --bg-q: #{HexToRGB(#242052)}; // rgba(var(--bg-q),1.0);
-  --bg-r: #{HexToRGB(#0C0B18)}; // rgba(var(--bg-r),1.0);
-  --bg-s: #{HexToRGB(#015cb4)}; // rgba(var(--bg-s),1.0);
-  --bg-t: #{HexToRGB(#090620)}; // rgba(var(--bg-t),1.0);
-  --bg-u: #{HexToRGB(#2e2d46)}; // rgba(var(--bg-u),1.0);
-  --bg-v: #{HexToRGB(#0C0A1A)}; // rgba(var(--bg-v),1.0);
-
   // --------------- default border color variable ---------------
   --br-a: #1e1f38; // var(--br-a);
   --br-b: #313260; // var(--br-b);
   --br-c: #1362f1; // var(--br-c);
   --br-d: #3b315d; // var(--br-d);
 
-
-  --br-e: #2D366C; // var(--br-e);
-  --br-f: #211d47; // var(--br-f);
-  --br-g: #1f1c44; // var(--br-g);
-  --br-h: #8a92bc; // var(--br-h);
-  --br-i: #6b76fe; // var(--br-i);
-  --br-j: #434CFF; // var(--br-j);
-
  // --------------- default gradient color variable ---------------
  --gr-a: linear-gradient(90deg, #1e1f38 0%, rgba(30, 31, 56, 0) 100%); // var(--gr-a);
  --gr-b: linear-gradient(180deg, #0f1024 0%, rgba(20, 25, 47, 0) 100%); // var(--gr-b);
  --gr-c: linear-gradient(180deg, #0f1024 0%, #14192f 100%); // var(--gr-c);
-
-
- --gr-d: linear-gradient(180deg, #6b76fe 0%, #53ffec 100%); // var(--gr-d);
- --gr-e: linear-gradient(77deg, #6b76fe 0%, #53ffec 100%); // var(--gr-e);
- --gr-f: linear-gradient(180deg, rgba(17, 15, 36, 0) 0%, #110f24 100%); // var(--gr-f);
- --gr-g: linear-gradient(180deg, #15132d 0%, #15132d 100%); // var(--gr-g);
- --gr-h: linear-gradient(350deg, rgba(36, 32, 79,0) 0%, rgba(38, 34, 93,1) 100%); // var(--gr-h);
- --gr-i: linear-gradient(162deg, #6b76fe 0%, #53ffec 100%); // var(--gr-i);
- --gr-j: linear-gradient(126deg, #6b76fe 0%, #53ffec 100%); // var(--gr-j);
- --gr-k: radial-gradient(95.86% 172.41% at 50% 45.37%, rgb(67, 76, 255) 0%, rgb(62, 219, 197) 100%); // var(--gr-k);
- --gr-l: linear-gradient(180deg, rgba(21, 19, 45,0) 0%, #15132d 100%); // var(--gr-l);
- --gr-m: linear-gradient(355deg, rgba(36, 32, 79,0) 75%, #26225d 100%); // var(--gr-m);
- --gr-o: linear-gradient(180deg, #0b0a17 100%); // var(--gr-o);
- --gr-p: linear-gradient(90deg, rgba(36, 32, 76, 0) 0%, #121026 100%); // var(--gr-p);
- --gr-r: linear-gradient(353deg, rgba(36, 32, 79, 0) 0%, #26225d 100%); // var(--gr-r);
- --gr-q: linear-gradient(180deg, rgba(15, 13, 33, 0) 0%, #0f0d21 100%); // var(--gr-q);
- --gr-s: linear-gradient(135deg, #6b76fe 0%, #53ffec 100%); // var(--gr-s);
- --gr-t: linear-gradient(90deg, #24204c 0%, #121026 100%); // var(--gr-t);
- --gr-u: linear-gradient(90deg, #24204c 0%, #121026 100%); // var(--gr-u);
- --gr-v: radial-gradient(398.84% 112.28% at 50% 45.37%, rgb(67, 76, 255) 0%, rgb(67, 76, 255) 100%); // var(--gr-v);
- --gr-w: linear-gradient(200deg, #201c46 0%, rgba(32, 28, 70, 0) 100%); // var(--gr-w);
- --gr-x: linear-gradient(180deg, rgba(15, 13, 33, 0) 0%, rgba(25, 22, 60, 0.52) 100%); // var(--gr-x);
- --gr-y: linear-gradient(180deg, rgba(83, 255, 236, 0) 0%, rgba(107, 122, 254, 0.54) 100%); // var(--gr-y);
- --gr-z: linear-gradient(180deg, #2a2758 0%, rgba(42, 39, 88, 0.65) 100%); // var(--gr-z);
-
-
- // --------------- mode gradient color variable ---------------
- --gradient-a:  linear-gradient(180deg, rgba(42, 39, 88, 0) 0%, rgba(32, 28, 70, 0.25) 100%); // var(--gradient-a);
- --gradient-b:  linear-gradient(180deg, #201c46 0%, rgba(32, 28, 70, 0) 100%); // var(--gradient-b);
- --gradient-c:  linear-gradient(37deg, #29235c 0%, rgba(41, 35, 92, 0) 100%); // var(--gradient-c);
- --gradient-d:  linear-gradient(180deg, rgba(42, 39, 88, 0) 0%, rgba(42, 39, 88, 0.25) 100%); // var(--gradient-d);
- --gradient-e:  linear-gradient(180deg, rgba(21, 19, 45, 0) 0%, #15132d 100%); // var(--gradient-e);
- --gradient-f:  linear-gradient(360deg, rgba(36, 32, 79, 0) 0%, rgba(38, 34, 93, 0.7) 100%); // var(--gradient-f);
- --gradient-g:  linear-gradient(180deg, #224b89 0%, #1d2a4a 0.01%, #3565e5 100%); // var(--gradient-g);
- --gradient-h:  linear-gradient(2deg, #6b76fe 0%, #53ffec 100%); // var(--gradient-h);
- --gradient-i:  linear-gradient(180deg, rgba(32, 28, 70, 0) 0%, #201c46 100%); // var(--gradient-i);
- --gradient-j:  linear-gradient(180deg, rgba(14, 13, 37, 0) 0%, #0e0d25 100%); // var(--gradient-j);
- --gradient-k:  linear-gradient(180deg, rgba(15, 13, 33, 0) 0%, #19163c 100%); // var(--gradient-k);
- --gradient-l:  linear-gradient(180deg, rgba(29, 27, 60, 0.5) 0%, #1d1b3c 100%); // var(--gradient-l);
- --gradient-m:  linear-gradient(353deg, rgba(36, 32, 79, 0) 0%, rgb(38, 34, 93) 100%); // var(--gradient-m);
- --gradient-o:  linear-gradient(180deg, rgba(41, 35, 92, 0) 0%, rgba(41, 35, 92, 1) 100%); // var(--gradient-o);
- --gradient-p:  linear-gradient(360deg, rgba(38, 34, 93, 0.7) 0%, rgba(36, 32, 79, 0) 100%); // var(--gradient-p);
- --gradient-q:  linear-gradient(360deg, rgba(29, 26, 62, 0) 0%, rgba(37, 33, 85, 0.52) 100%); // var(--gradient-q);
- --gradient-r:  linear-gradient(180deg, #2a2758 0%, #2a2758 100%); // var(--gradient-r);
- --gradient-s:  linear-gradient(37deg, rgba(41, 35, 92, 0) 0%, #29235c 100%); // var(--gradient-s);
- 
 }       
 
 

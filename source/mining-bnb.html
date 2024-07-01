@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="mining-section">
+      <div class="container">
+        <div class="mining-section__box">
+          <div class="mining-section__inner">
+          <div class="info-box info-box--mining">
+            <div class="info-box__wrapp">
+              <div class="info-box__coin">
+                <picture>
+                  <source type='image/webp' srcset='img/index/coin4.webp'>
+                  <img width='40' height='40' src='img/index/coin4.png' alt='image'>
+                </picture>
+              </div>
+              <span class="info-box__currency">
+                2.092390 <b class="info-box__valute">TRX</b>
+              </span>
+              <span class="info-box__pretitle">⚡ 100 TH/s</span>
+            </div>
+            <div class="info-box__btns">
+              <button class="main-btn main-btn--red">Claim</button>
+              <button class="main-btn">
+                Boost
+                <span class="main-btn__icon">
+                  <img width="31" height="31" src="./img/index/rocket.png" alt="image">
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="mining">
+            <video type="video/mp4" width="390" height="290" src="./img/BNB_end_2000.mp4" playsinline muted autoplay loop></video>   
+          </div>
+        </div>
+          <div class="mining-label">
+            <span class="mining-label__top">coming soon</span>
+            <div class="mining-label__col">
+              <div class="mining-label__coin">
+                <picture>
+                  <source type='image/webp' srcset='img/index/coin4.webp'>
+                  <img width='37' height='37' src='img/index/coin4.png' alt='image'>
+                </picture>
+              </div>
+              <span class="mining-label__text">Earning Rate:</span>
+              <span class="mining-label__value">
+                0.001 
+                <b class="mining-label__valute">TRX/day</b>
+              </span>
+            </div>
+            
+            <div class="mining-label__col">
+              <div class="mining-label__icon">
+                <img  width='38' height='35' src='./img/sprite/chevron.svg' alt='image'>
+              </div>
+              <span class="mining-label__text">Level:</span>
+              <span class="mining-label__value">
+                Free
+              </span>
+            </div>
+
+            <button class="mining-label__btn">
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div class="bar">
+    <ul class="bar__list">
+      <li class="bar__item">
+        <a href="index.html" class="bar__link">
+          <span class="bar__icon">
+            <svg width='18' height='24'>
+              <use href='img/sprite/sprite.svg#home'></use>
+            </svg>
+          </span>
+          Home
+        </a>
+      </li>
+      <li class="bar__item">
+        <a href="#" class="bar__link active">
+          <span class="bar__icon">
+            <svg width='18' height='24'>
+              <use href='img/sprite/sprite.svg#vallet'></use>
+            </svg>
+          </span>
+          Wallet
+        </a>
+      </li>
+      <li class="bar__item">
+        <a href="#" class="bar__link">
+          <span class="bar__icon">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#friends'></use>
+            </svg>
+          </span>
+          Friends
+        </a>
+      </li>
+      <li class="bar__item">
+        <a href="#" class="bar__link">
+          <span class="bar__icon">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#receipt'></use>
+            </svg>
+          </span>
+          Tasks
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</body>
+<script src="js/main.js"></script>
+
+</html>
