@@ -3,7 +3,8 @@
     overflow: hidden;
     padding: 14px 0 91px;
     min-height: 100dvh;
-    background:#030221;
+    background:rgba(var(--bg-i),1.0);
+
     .container{
         min-height: 100%;
     }
@@ -12,7 +13,7 @@
         display: flex;
         flex-direction: column;
         grid-gap: 13px;
-        min-height: calc(100dvh - 100px);
+        min-height: calc(100dvh - 105px);
     }
 
     &__inner{
@@ -36,12 +37,9 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    // background-image: url(../img/mining/0020-min.png);
-   
-    // animation: pickaxe-swing 1s steps(30) infinite;
    
     &__bg{
-        background: url('../img/mining/0020.png') no-repeat center center;
+        background: url('../img/mining/0025.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -57,12 +55,10 @@
    
     img,video{
         width: 100%;
-        height: auto;
-       
-        // display: none; 
+        height: 100%;
         visibility: hidden;
         z-index: 2;
-
+        object-fit: contain;
        
         &::before {
             content: '';
@@ -81,39 +77,4 @@
             background-size: cover;
         }
     }
-}
-
-
-@keyframes pickaxe-swing {
-    0% { background-image: url('../img/mining/0020-min.png'); }
-    3.33% { background-image: url('../img/mining/0021-min.png'); }
-    6.67% { background-image: url('../img/mining/0022-min.png'); }
-    10% { background-image: url('../img/mining/0023-min.png'); }
-    13.33% { background-image: url('../img/mining/0024-min.png'); }
-    16.67% { background-image: url('../img/mining/0025-min.png'); }
-    20% { background-image: url('../img/mining/0026-min.png'); }
-    23.33% { background-image: url('../img/mining/0027-min.png'); }
-    26.67% { background-image: url('../img/mining/0028-min.png'); }
-    30% { background-image: url('../img/mining/0029-min.png'); }
-    33.33% { background-image: url('../img/mining/0030-min.png'); }
-    36.67% { background-image: url('../img/mining/0031-min.png'); }
-    40% { background-image: url('../img/mining/0032-min.png'); }
-    43.33% { background-image: url('../img/mining/0033-min.png'); }
-    46.67% { background-image: url('../img/mining/0034-min.png'); }
-    50% { background-image: url('../img/mining/0035-min.png'); }
-    53.33% { background-image: url('../img/mining/0036-min.png'); }
-    56.67% { background-image: url('../img/mining/0037-min.png'); }
-    60% { background-image: url('../img/mining/0038-min.png'); }
-    63.33% { background-image: url('../img/mining/0039-min.png'); }
-    66.67% { background-image: url('../img/mining/0040-min.png'); }
-    70% { background-image: url('../img/mining/0041-min.png'); }
-    73.33% { background-image: url('../img/mining/0042-min.png'); }
-    76.67% { background-image: url('../img/mining/0043-min.png'); }
-    80% { background-image: url('../img/mining/0044-min.png'); }
-    83.33% { background-image: url('../img/mining/0045-min.png'); }
-    86.67% { background-image: url('../img/mining/0046-min.png'); }
-    90% { background-image: url('../img/mining/0047-min.png'); }
-    93.33% { background-image: url('../img/mining/0048-min.png'); }
-    96.67% { background-image: url('../img/mining/0049-min.png'); }
-    100% { background-image: url('../img/mining/0050-min.png'); }
 }
