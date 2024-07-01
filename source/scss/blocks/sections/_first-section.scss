@@ -12,7 +12,7 @@
     top: 8%;
     pointer-events: none;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     filter: blur(15px);
     top: 50%;
     transform: translateY(-58%);
@@ -25,11 +25,11 @@
     height: 600px;
 
     @include for-mobile{
-      left: -3%;
+      left: -5%;
     }
 
     @include mobile{
-      left: -5%;
+      left: -15%;
     }
   }
 
@@ -40,11 +40,11 @@
     height: 600px;
 
     @include for-mobile{
-      right: -4%;
+      right: -8%;
     }
 
     @include mobile{
-      right: -11%;
+      right: -21%;
     }
   }
 
